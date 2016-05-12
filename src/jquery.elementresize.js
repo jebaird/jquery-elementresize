@@ -39,8 +39,8 @@
         activate: function () {
             var frameContent = '<!DOCTYPE html><html><head><title>jquery.elementResize</title></head><body><script>window.onresize = resize;function resize() { var detector = parent.$ ? parent.$(this.frameElement).data("elementResize") : null; if (detector) { detector.trigger(); } }</script></body></html>',
                 iframes = [
-                    $('<iframe src="about:blank" style="position:absolute; top:-50000px; left:0px; width:100%;"></iframe>'), 
-                    $('<iframe src="about:blank" style="position:absolute; top:0; left:-50000px; height:100%;"></iframe>') 
+                    $('<iframe src="about:blank" style="position:relative; top:-50000px; left:0px; width:100%;"></iframe>'), 
+                    $('<iframe src="about:blank" style="position:relative; top:0; left:-50000px; height:100%;"></iframe>') 
                 ];
 
             for (var index = 0; index < iframes.length; index++) {
